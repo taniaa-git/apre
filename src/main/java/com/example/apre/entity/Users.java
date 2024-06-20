@@ -3,7 +3,9 @@ package com.example.apre.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
