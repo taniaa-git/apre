@@ -14,7 +14,7 @@ public class DatabaseConfig {
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl("jdbc:postgresql://localhost:5432/apre");
         dataSource.setUsername("postgres");
-        dataSource.setPassword("1234");
+        dataSource.setPassword("bd1234");
         return dataSource;
     }
 }
