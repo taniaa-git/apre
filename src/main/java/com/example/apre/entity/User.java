@@ -15,7 +15,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "users")
 public class User {
-    @Id // Para MySQL usando AUTO_INCREMENT
+    @Id
     private UUID id;
     @NotNull
     @Column(unique = true)

@@ -51,7 +51,7 @@ public class UserController {
 
             // Guardar el usuario
             User createdUser = userService.saveUser(user);
-            return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
+            return ResponseEntity.status(HttpStatus.CREATED).body("Usuario creado correctamente con username: " + createdUser.getUsername());
 
         } catch (Exception e) {
             log.error("Error al guardar el usuario", e);
