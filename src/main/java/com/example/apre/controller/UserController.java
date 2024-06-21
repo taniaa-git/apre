@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Autowired
     private UserRepository userRepository;
+
     @GetMapping
-    public String user(){
+    public String user() {
         return "test";
     }
 
-    @PostMapping("/endpoint")
-    public Users createdUser(@RequestBody Users users){
-        return userRepository.save(users);
+    @PostMapping("/create")
+    public Users createUser(@RequestBody Users user) {
+        return userRepository.save(user);
     }
 }
