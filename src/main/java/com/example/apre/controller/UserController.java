@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createUser(@RequestBody User user) {
+    public ResponseEntity<?> createUser( @RequestBody User user) {
         log.info("Inicia guardado de usuario");
 
         try {

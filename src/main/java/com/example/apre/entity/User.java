@@ -5,10 +5,7 @@ import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 
@@ -18,7 +15,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "users")
 public class User {
-    @Id
+    @Id // Para MySQL usando AUTO_INCREMENT
     private UUID id;
     @NotNull
     @Column(unique = true)
