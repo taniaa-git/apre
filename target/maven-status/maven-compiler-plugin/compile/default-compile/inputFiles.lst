@@ -1,7 +1,6 @@
-C:\Users\Santa\Documents\GitHub\apre\src\main\java\com\example\apre\ApreApplication.java
-C:\Users\Santa\Documents\GitHub\apre\src\main\java\com\example\apre\configuration\DatabaseConfig.java
-C:\Users\Santa\Documents\GitHub\apre\src\main\java\com\example\apre\controller\UserController.java
-C:\Users\Santa\Documents\GitHub\apre\src\main\java\com\example\apre\entity\Users.java
-C:\Users\Santa\Documents\GitHub\apre\src\main\java\com\example\apre\repository\UserRepository.java
-C:\Users\Santa\Documents\GitHub\apre\src\main\java\com\example\apre\service\impl\UserServiceImpl.java
-C:\Users\Santa\Documents\GitHub\apre\src\main\java\com\example\apre\service\UserService.java
+/Users/tanis/Documents/apre/src/main/java/com/example/apre/service/UserService.java
+/Users/tanis/Documents/apre/src/main/java/com/example/apre/entity/User.java
+/Users/tanis/Documents/apre/src/main/java/com/example/apre/controller/UserController.java
+/Users/tanis/Documents/apre/src/main/java/com/example/apre/repository/UserRepository.java
+/Users/tanis/Documents/apre/src/main/java/com/example/apre/service/impl/UserServiceImpl.java
+/Users/tanis/Documents/apre/src/main/java/com/example/apre/ApreApplication.java

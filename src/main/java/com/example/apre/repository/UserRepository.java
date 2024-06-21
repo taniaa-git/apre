@@ -1,10 +1,12 @@
 package com.example.apre.repository;
 
-import com.example.apre.entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import com.example.apre.entity.User;
 
-@Repository
-public interface UserRepository extends JpaRepository<Users, Long> {
+import java.util.Optional;
+import java.util.UUID;
+
+public interface UserRepository extends JpaRepository<User, UUID> {
+    Optional<User> findByEmail(String email);
+    Optional<User> findByUsername(String username);
 }
