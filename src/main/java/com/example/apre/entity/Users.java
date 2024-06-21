@@ -1,22 +1,18 @@
 package com.example.apre.entity;
 
-
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
+import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Getter
 @Setter
-
 @Entity
 public class Users {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Long id;
+    private String id;
     private String username;
     private String email;
     private String password;
@@ -24,5 +20,4 @@ public class Users {
 
     public Users() {
     }
-
 }
