@@ -1,23 +1,30 @@
 package com.example.apre.entity;
 
+import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.Entity;
 import javax.persistence.*;
+import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
-public class Users {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Table(name = "users")
+public class User {
     @Id
-    private String id;
+    private UUID id;
+    @NotNull
+    @Column(unique = true)
     private String username;
+    @NotNull
+    @Column(unique = true)
     private String email;
+    @NotNull
     private String password;
+    @NotNull
     private int role;
 
-    public Users() {
+    public User() {
     }
+
 }
