@@ -1,7 +1,11 @@
 package com.example.apre.service;
 
-import com.example.apre.entity.Users;
+import com.example.apre.entity.User;
+
+import java.util.Optional;
 
 public interface UserService {
-    Users saveUser(Users user);
+    User saveUser(User user);
+    Optional<User> findByEmail(String email);
+    Optional<User> findByUsername(String username);
 }
