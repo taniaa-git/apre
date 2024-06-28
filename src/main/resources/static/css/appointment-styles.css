@@ -1,35 +1,97 @@
-/* Estilos básicos para el formulario y la tabla */
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: Century Gothic;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
 }
 
 form {
     margin-bottom: 20px;
 }
 
-label {
-    display: inline-block;
-    width: 150px;
-    margin-bottom: 10px;
+form label {
+    display: block;
+    margin-bottom: 8px;
 }
 
-input, button {
-    margin-bottom: 10px;
+form input[type="date"]{
+                           width: calc(100% - 24px);
+                           padding: 8px;
+                           margin-bottom: 16px;
+                           border: 1px solid #ccc;
+                           border-radius: 4px;
+                           font-size: 14px;
+                           text-align: center;
+                       }
+form input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    left: 660px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-th {
-    background-color: #f2f2f2;
+table th, table td {
+    padding: 12px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+#back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#back-button:hover {
+    background-color: #0056b3;
 }

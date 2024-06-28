@@ -14,6 +14,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:63342") // Configuración CORS
 public class UserController {
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
     private final UserService userService;

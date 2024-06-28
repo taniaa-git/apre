@@ -6,18 +6,16 @@ $(document).ready(function () {
     $('#appointment-form').on('submit', function (e) {
         e.preventDefault();
 
-        const userId = $('#user_id').val();
         const appointmentDate = $('#appointment_date').val();
         const purpose = $('#purpose').val();
 
         const appointment = {
-            user_id: userId,
-            appointment_date: appointmentDate,
+            appointmentDate: appointmentDate,
             purpose: purpose
         };
 
         $.ajax({
-            url: '/api/appointments',
+            url: 'http://localhost:8081/api/appointments',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(appointment),
@@ -33,25 +31,26 @@ $(document).ready(function () {
 
     function loadAppointments() {
         $.ajax({
-            url: '/api/appointments',
+            url: 'http://localhost:8081/api/appointments',
             type: 'GET',
-            success: function (data) {
-                const appointmentsTable = $('#appointments-table tbody');
-                appointmentsTable.empty();
-
-                data.forEach(function (appointment) {
-                    const row = `<tr>
-                                    <td>${appointment.id}</td>
-                                    <td>${appointment.user_id}</td>
-                                    <td>${appointment.appointment_date}</td>
-                                    <td>${appointment.purpose}</td>
-                                </tr>`;
-                    appointmentsTable.append(row);
-                });
+            dataType: 'json',
+            success: function(data) {
+                console.log(data); // Verificar la respuesta
+                if (Array.isArray(data)) {
+                    data.forEach(function(appointment) {
+                        var row = $('<tr>');
+                        row.append($('<td>').text(appointment.appointmentDate));
+                        row.append($('<td>').text(appointment.purpose));
+                        $('#appointments-table tbody').append(row);
+                    });
+                } else {
+                    console.error("La respuesta no es un arreglo:", data);
+                }
             },
-            error: function (error) {
-                alert('Hubo un problema al cargar las citas: ' + error.responseText);
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('Hubo un problema al cargar las citas:', errorThrown);
             }
         });
+
     }
 });

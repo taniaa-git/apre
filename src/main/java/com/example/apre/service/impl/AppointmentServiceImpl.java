@@ -6,6 +6,8 @@ import com.example.apre.service.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AppointmentServiceImpl implements AppointmentService {
 
@@ -15,5 +17,9 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public Appointment saveAppointment(Appointment appointment) {
         return appointmentRepository.save(appointment);
+    }
+    @Override
+    public List<Appointment> findAll() {
+        return appointmentRepository.findAll();
     }
 }
